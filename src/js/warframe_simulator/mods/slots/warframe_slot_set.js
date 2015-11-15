@@ -4,12 +4,12 @@ import ExilusSlot from './exilus_slot'
 
 class WarframeSlotSet extends SlotSet {
 
-  constructor() {
-    super()
+  constructor(length = 10) {
+    super(length)
     this.slots.aura = new AuraSlot()
     this.slots.exilus = new ExilusSlot()
   }
 
 }
 
-export default SlotSet
+export default WarframeSlotSet
