@@ -1,8 +1,8 @@
 import { Build } from '../src/'
+import { Soma } from '../data'
+import SlotSet from '../src/slots/slot_set'
 
-const mocked_item = {
-  default_polarities: new Array(8)
-}
+const mocked_item = new Soma()
 
 describe('Build', () => {
   it('it saves the given item', () => {
@@ -10,8 +10,9 @@ describe('Build', () => {
     expect(build.item).to.eq(mocked_item)
   })
 
-  it('has a mod set', () => {
+  it('has a slot set', () => {
     const build = new Build(mocked_item)
-    expect(build.mod_set).to.exist
+    expect(build.slot_set).to.be.instanceof(SlotSet)
   })
+
 })

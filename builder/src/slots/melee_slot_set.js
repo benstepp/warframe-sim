@@ -4,10 +4,10 @@ import StanceSlot from './stance_slot'
 class MeleeSlotSet extends SlotSet {
 
   constructor(polarity_set) {
-    this.stance = new StanceSlot()
     super(polarity_set)
+    this.stance = new StanceSlot()
   }
 
 }
 
-export default meleeSlotSet
+export default MeleeSlotSet

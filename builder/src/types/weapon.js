@@ -1,7 +1,10 @@
-class Weapon {
+import Buildable from './buildable'
+import { SlotSet } from '../slots'
 
-  constructor() {
+class Weapon extends Buildable {
 
+  set_default_slots() {
+    this.slots = new SlotSet()
   }
 
 }

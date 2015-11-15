@@ -7,15 +7,11 @@ import BulletRifle from './bullet_rifle'
 import BulletShotgun from './bullet_rifle'
 import MeleeWeapon from './melee_weapon'
 
-const WeaponTypes = {
-  BeamPistol,
-  BeamRifle,
-  BowWeapon,
-  BulletArchgun,
-  BulletPistol,
-  BulletRifle,
-  BulletShotgun,
-  MeleeWeapon
-}
-
-export default WeaponTypes
+export { BeamPistol }
+export { BeamRifle }
+export { BowWeapon }
+export { BulletArchgun }
+export { BulletPistol }
+export { BulletRifle }
+export { BulletShotgun }
+export { MeleeWeapon }

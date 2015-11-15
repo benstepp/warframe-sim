@@ -1,10 +1,10 @@
-import ModSet from './mods/mod_set'
+import SlotSet from './slots/slot_set'
 
 class Build {
 
   constructor(item) {
     this.item = item
-    this.mod_set = new ModSet(item.default_polarities)
+    this.slot_set = new SlotSet()
   }
 
 }
