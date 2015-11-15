@@ -1,5 +1,5 @@
-import SlotSet from '../../../../src/js/warframe_simulator/mods/slots/slot_set'
-import ModSlot from '../../../../src/js/warframe_simulator/mods/slots/mod_slot'
+import SlotSet from '../../src/slots/slot_set'
+import ModSlot from '../../src/slots/mod_slot'
 
 describe('SlotSet', () => {
   it('is initialized with a number of default slots', () => {

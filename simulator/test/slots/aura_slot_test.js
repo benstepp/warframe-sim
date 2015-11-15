@@ -1,4 +1,4 @@
-import AuraSlot from '../../../../src/js/warframe_simulator/mods/slots/aura_slot'
+import AuraSlot from '../../src/slots/aura_slot'
 
 const mocked_polarity = {
   name: 'attack_polarity',

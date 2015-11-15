@@ -1,4 +1,4 @@
-import ModSlot from '../../../../src/js/warframe_simulator/mods/slots/mod_slot'
+import ModSlot from '../../src/slots/mod_slot'
 
 const mocked_polarity = {
   name: 'attack_polarity',

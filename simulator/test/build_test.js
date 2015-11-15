@@ -1,4 +1,4 @@
-import { Build } from '../../src/js/warframe_simulator'
+import { Build } from '../src/'
 
 const mocked_item = {
   default_polarities: new Array(8)

@@ -1,5 +1,5 @@
-import WarframeSlotSet from '../../../../src/js/warframe_simulator/mods/slots/warframe_slot_set'
-import ModSlot from '../../../../src/js/warframe_simulator/mods/slots/mod_slot'
+import WarframeSlotSet from '../../src/slots/warframe_slot_set'
+import ModSlot from '../../src/slots/mod_slot'
 
 describe('WarframeSlotSet', () => {
   it('has a default of 12 slots for 10 + aura + exilus', () => {

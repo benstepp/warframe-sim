@@ -1,4 +1,4 @@
-import ModSet from '../../../src/js/warframe_simulator/mods/mod_set'
+import ModSet from '../../src/mods/mod_set'
 
 const mocked_polarities = {
   aura: 'aura',
