@@ -9,8 +9,8 @@ class SlotSet {
     }
   }
 
-  set_polarity() {
-
+  set_polarity(polarity, slot) {
+    this.slots[slot].polarity = polarity
   }
 
 }
