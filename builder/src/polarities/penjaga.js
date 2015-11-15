@@ -1,4 +1,6 @@
-class Penjaga {
+import Polarity from './polarity'
+
+class Penjaga extends Polarity {
 
 }
 

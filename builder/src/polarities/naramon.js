@@ -1,4 +1,6 @@
-class Naramon {
+import Polarity from './polarity'
+
+class Naramon extends Polarity {
 
 }
 

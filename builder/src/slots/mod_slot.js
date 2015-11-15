@@ -1,6 +1,8 @@
+import { NullPolarity } from '../polarities'
+
 class ModSlot {
 
-  constructor(polarity, mod) {
+  constructor(polarity = new NullPolarity, mod) {
     this.polarity = polarity
     this.mod = mod
   }
@@ -10,8 +12,16 @@ class ModSlot {
     return this._rounded(used)
   }
 
+  change_polarity(polarity) {
+    this.polarity = polarity
+  }
+
+  change_mod(mod) {
+    this.mod = mod
+  }
+
   get _used_capacity_value() {
-    if (this.mod.polarity === this.polarity) {
+    if (this.mod.polarity.type === this.polarity.type) {
       return this._matched_polarity
     } else {
       return this._unmatched_polarity

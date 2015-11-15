@@ -1,16 +1,8 @@
 import ModSlot from '../../src/slots/mod_slot'
+import { NullPolarity, Polarity } from '../../src/polarities'
 
-const mocked_polarity = {
-  name: 'attack_polarity',
-  matched_multiplier: 2,
-  unmatched_multiplier: 0.5
-}
-
-const mocked_null_polarity = {
-  name: 'null_polarity',
-  matched_multiplier: 1,
-  unmatched_multiplier: 1
-}
+const mocked_polarity = new Polarity()
+const mocked_null_polarity = new NullPolarity()
 
 const mocked_mod = { name: 'Serration', drain: 9, polarity: mocked_polarity }
 const mocked_mod_unmatched = { drain: 9, polarity: mocked_null_polarity }
@@ -24,6 +16,11 @@ describe('ModSlot', () => {
   it('saves the mod in the slot', () => {
     const mod_slot = new ModSlot(mocked_polarity, mocked_mod)
     expect(mod_slot.mod).to.eq(mocked_mod)
+  })
+
+  it('has a default polarity of null_polarity', () => {
+    const mod_slot = new ModSlot()
+    expect(mod_slot.polarity).to.be.instanceof(NullPolarity)
   })
 
   describe('used_capacity', () => {
@@ -49,6 +46,14 @@ describe('ModSlot', () => {
       const mod_slot = new ModSlot(mocked_polarity, mocked_mod_unmatched)
       const used_capacity = mod_slot.used_capacity
       expect(used_capacity).to.be.below(mocked_mod.drain)
+    })
+  })
+
+  describe('change_polarity', () => {
+    it('changes to polarity', () => {
+      const mod_slot = new ModSlot(mocked_polarity, mocked_mod)
+      mod_slot.change_polarity(mocked_null_polarity)
+      expect(mod_slot.polarity).to.eq(mocked_null_polarity)
     })
   })
 

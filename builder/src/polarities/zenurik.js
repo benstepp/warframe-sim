@@ -1,4 +1,6 @@
-class Zenurik {
+import Polarity from './polarity'
+
+class Zenurik extends Polarity {
 
 }
 

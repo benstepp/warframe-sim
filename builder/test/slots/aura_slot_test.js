@@ -1,16 +1,8 @@
 import AuraSlot from '../../src/slots/aura_slot'
+import { Polarity, NullPolarity } from '../../src/polarities'
 
-const mocked_polarity = {
-  name: 'attack_polarity',
-  matched_multiplier: 2,
-  unmatched_multiplier: 0.5
-}
-
-const mocked_null_polarity = {
-  name: 'null_polarity',
-  matched_multiplier: 1,
-  unmatched_multiplier: 1
-}
+const mocked_polarity = new Polarity()
+const mocked_null_polarity = new NullPolarity()
 
 const mocked_mod = { name: 'Serration', drain: -9, polarity: mocked_polarity }
 const mocked_mod_unmatched = { drain: -9, polarity: mocked_null_polarity }
@@ -41,6 +33,5 @@ describe('AuraSlot', () => {
       expect(used_capacity).to.be.above(mocked_mod.drain)
     })
   })
-
 
 })

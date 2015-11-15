@@ -1,4 +1,6 @@
-class Madurai {
+import Polarity from './polarity'
+
+class Madurai extends Polarity {
 
 }
 

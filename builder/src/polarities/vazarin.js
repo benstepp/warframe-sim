@@ -1,4 +1,6 @@
-class Vazarin {
+import Polarity from './polarity'
+
+class Vazarin extends Polarity {
 
 }
 

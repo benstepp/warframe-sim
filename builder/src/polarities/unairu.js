@@ -1,4 +1,6 @@
-class Unairu {
+import Polarity from './polarity'
+
+class Unairu extends Polarity {
 
 }
 

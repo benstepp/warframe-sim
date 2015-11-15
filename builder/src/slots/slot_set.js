@@ -10,7 +10,19 @@ class SlotSet {
   }
 
   change_polarity(polarity, slot) {
-    this.slots[slot].polarity = polarity
+    this.slots[slot].change_polarity(polarity)
+  }
+
+  change_mod(mod, slot) {
+    this.slots[slot].change_mod(mod)
+  }
+
+  get used_capacity() {
+    let sum = 0
+    this.slots.forEach( (mod_slot) => {
+      sum += mod_slot.used_capacity
+    })
+    return sum
   }
 
 }

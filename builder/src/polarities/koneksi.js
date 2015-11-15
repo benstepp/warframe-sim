@@ -1,4 +1,6 @@
-class Koneksi {
+import Polarity from './polarity'
+
+class Koneksi extends Polarity {
 
 }
 
