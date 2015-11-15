@@ -13,7 +13,7 @@ class ModSlot {
   get _used_capacity_value() {
     if (this.mod.polarity === this.polarity) {
       return this._matched_polarity
-    } else if (this.mod.polarity !== this.polarity) {
+    } else {
       return this._unmatched_polarity
     }
   }
