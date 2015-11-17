@@ -10,17 +10,18 @@ describe('WarframeSlotSet', () => {
   it('contains mod slots', () => {
     const slot_set = new WarframeSlotSet()
     for (let key of slot_set.slots) {
+
       expect(slot_set.slots[key]).to.all.be.instanceof(ModSlot)
     }
   })
 
   it('has an aura slot', () => {
     const slot_set = new WarframeSlotSet()
-    expect(slot_set.slots.aura).to.exist
+    expect(slot_set.slots.has('aura')).to.eq(true)
   })
 
   it('has an exilus slot', () => {
     const slot_set = new WarframeSlotSet()
-    expect(slot_set.slots.exilus).to.exist
+    expect(slot_set.slots.has('exilus')).to.eq(true)
   })
 })

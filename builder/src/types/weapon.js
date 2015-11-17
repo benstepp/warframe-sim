@@ -4,7 +4,7 @@ import { SlotSet } from '../slots'
 class Weapon extends Buildable {
 
   set_default_slots() {
-    this.slots = new SlotSet()
+    this.default_slots = new SlotSet()
   }
 
 }

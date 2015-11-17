@@ -6,8 +6,8 @@ class WarframeSlotSet extends SlotSet {
 
   constructor(length = 10) {
     super(length)
-    this.slots.aura = new AuraSlot()
-    this.slots.exilus = new ExilusSlot()
+    this.slots.set('aura', new AuraSlot())
+    this.slots.set('exilus', new ExilusSlot())
   }
 
 }

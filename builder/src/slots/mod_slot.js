@@ -20,6 +20,10 @@ class ModSlot {
     this.mod = mod
   }
 
+  includes_mod(mod) {
+    return (this.mod === mod)
+  }
+
   get _used_capacity_value() {
     if (this.mod.polarity.type === this.polarity.type) {
       return this._matched_polarity
