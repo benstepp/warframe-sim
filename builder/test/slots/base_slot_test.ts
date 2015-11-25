@@ -17,6 +17,5 @@ describe('BaseSlot', () => {
       expect(base_slot.polarity).to.eq(changed_polarity)
     })
   })
-
 })
 

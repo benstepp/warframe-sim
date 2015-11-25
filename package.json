@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha 'builder/test/**/*_test.ts' --reporter dot --require test_helper.js"
+    "test": "mocha 'builder/test/**/*_test.ts' 'builder/spec/**/*_test.ts' --reporter dot --require test_helper.js"
   },
   "keywords": [],
   "author": "",
