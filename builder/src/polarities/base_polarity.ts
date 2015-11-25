@@ -32,9 +32,18 @@ class BasePolarity implements Polarity {
    * having a different multiplier
    */
   private initialize() {
-      this.multiplier = 2
+      this.set_multiplier()
       this.save_instance()
       return this
+  }
+
+  /**
+   * Sets the multiplier of the polarity. Overwrite if polarity
+   * has a different multiplier, as is the case for a null
+   * polarity.
+   */
+  set_multiplier() {
+    this.multiplier = 2
   }
 
   /**

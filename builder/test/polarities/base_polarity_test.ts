@@ -12,13 +12,13 @@ describe('BasePolarity', () => {
       const multiplier = base_polarity.multiplier
       expect(multiplier).to.eq(Math.floor(multiplier))
     })
+  })
 
-    describe('singleton behavior', () => {
-      it('is the same as another of the same type', () => {
-      const base_polarity_a = new BasePolarity
-      const base_polarity_b = new BasePolarity
-      expect(base_polarity_a).to.eq(base_polarity_b)
-      })
+  describe('singleton behavior', () => {
+    it('is the same as another of the same type', () => {
+    const base_polarity_a = new BasePolarity
+    const base_polarity_b = new BasePolarity
+    expect(base_polarity_a).to.eq(base_polarity_b)
     })
   })
 })

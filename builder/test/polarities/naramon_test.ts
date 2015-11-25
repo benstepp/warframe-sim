@@ -1,10 +1,22 @@
 import { BasePolarity } from '../../src/polarities/base_polarity'
-import { Naramon } from '../../src/polarities/naramon'
+import { Koneksi, Naramon, Madurai } from '../../src/polarities'
 
 describe('Naramon', () => {
   it('is a base polarity', () => {
     const naramon = new Naramon
     expect(naramon).to.be.instanceof(BasePolarity)
+  })
+
+  it('is not a madurai polarity', () => {
+    const naramon = new Naramon
+    const madurai = new Madurai
+    expect(naramon).to.not.eq(madurai)
+  })
+
+  it('is not a koneksi polarity', () => {
+    const naramon = new Naramon
+    const koneksi = new Koneksi
+    expect(naramon).to.not.eq(koneksi)
   })
 
   describe('singleton behavior', () => {
