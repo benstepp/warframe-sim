@@ -1,2 +1,4 @@
 require('babel-core/register')
-global.expect = require('chai').expect
+require('ts-node/register')
+require('./test_helper_2')
+require('use-strict')
