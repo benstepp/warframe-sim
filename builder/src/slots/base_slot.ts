@@ -1,6 +1,6 @@
 import { Slot } from './slot'
 import { Polarity, NullPolarity } from '../polarities'
-import { Mod } from '../mods'
+import { Mod, NullMod } from '../mods'
 
 class BaseSlot implements Slot {
   _polarity: Polarity
@@ -8,10 +8,12 @@ class BaseSlot implements Slot {
 
   /**
    * Initialize with a polarity or set the polarity to
-   * a null polarity to signify the lack of polarity
+   * a null polarity to signify the lack of polarity.
+   * A mod can also be used.
    */
-  constructor(polarity?: Polarity) {
+  constructor(polarity?: Polarity, mod?: Mod) {
     this.polarity = polarity || new NullPolarity
+    this.mod = mod || new NullMod
   }
 
   /**
@@ -19,7 +21,7 @@ class BaseSlot implements Slot {
    * if the polarity needs to change (eg. Forma)
    */
   set polarity(polarity: Polarity) {
-    this._polarity = polarity
+    this._polarity = polarity || new NullPolarity
   }
 
   get polarity() {
@@ -38,13 +40,19 @@ class BaseSlot implements Slot {
   }
 
   get used_capacity() {
-    const cost = this._mod.cost
-    const multiplier = this._polarity.multiplier
     if (this._mod.polarity === this._polarity) {
-      return cost / multiplier
+      return this.matched_capacity
     } else {
-      return cost * multiplier
+      return this.unmatched_capacity
     }
+  }
+
+  get matched_capacity() {
+    return this._mod.cost / this._polarity.multiplier
+  }
+
+  get unmatched_capacity() {
+    return this._mod.cost * this._polarity.multiplier
   }
 
 }

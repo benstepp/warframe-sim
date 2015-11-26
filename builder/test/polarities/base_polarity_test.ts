@@ -16,9 +16,15 @@ describe('BasePolarity', () => {
 
   describe('singleton behavior', () => {
     it('is the same as another of the same type', () => {
-    const base_polarity_a = new BasePolarity
-    const base_polarity_b = new BasePolarity
-    expect(base_polarity_a).to.eq(base_polarity_b)
+      const base_polarity_a = new BasePolarity
+      const base_polarity_b = new BasePolarity
+      expect(base_polarity_a).to.eq(base_polarity_b)
+    })
+
+    it('can be called as instance or new', () => {
+      const base_polarity_a = BasePolarity.instance
+      const base_polarity_b = new BasePolarity
+      expect(base_polarity_a).to.eq(base_polarity_b)
     })
   })
 })

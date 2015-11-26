@@ -1,6 +1,6 @@
 /**
- * A Variable to store the instances of the polarities.
- * The constructor of the polarity is given as a key. By
+ * A Variable to store the instances of the singletons.
+ * The constructor of the singleton is given as a key. By
  * using instances we can reduce the object count
  */
 const instances = new WeakMap()
@@ -15,12 +15,16 @@ class Singleton {
    */
   constructor() {
     let instance = instances.get(this.constructor)
-    if (instance === void 0) {
+    if (instance === undefined) {
      this.initialize()
      this.save_instance()
      instance = this
     }
     return instance
+  }
+
+  static get instance() {
+    return new this
   }
 
   /**

@@ -1,4 +1,5 @@
 import { BaseMod, WeaponMod } from '../../src/mods'
+import { Madurai } from '../../src/polarities'
 
 class Serration extends BaseMod implements WeaponMod {
 
@@ -7,14 +8,11 @@ class Serration extends BaseMod implements WeaponMod {
     this._rank = rank || 1
     this._max_rank = 10
     this._cost = 4
+    this._polarity = new Madurai
   }
 
   accept(weapon: any) {
     return weapon
-  }
-
-  get cost() {
-    return this._cost + this._rank
   }
 
 }

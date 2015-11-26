@@ -8,6 +8,12 @@ interface SetPolarity {
 interface Slot {
   _polarity: Polarity
   _mod: Mod
+  polarity: Polarity
+  mod: Mod
+  used_capacity: number
+  matched_capacity: number
+  unmatched_capacity: number
+
 }
 
 export { Slot }

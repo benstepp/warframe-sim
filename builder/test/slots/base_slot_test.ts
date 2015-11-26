@@ -37,6 +37,11 @@ describe('BaseSlot', () => {
       const used_capacity = base_slot.used_capacity
       expect(Math.floor(used_capacity)).to.eq(used_capacity)
     })
+
+     it('is zero for a modless baseslot', () => {
+      const base_slot = new BaseSlot
+      expect(base_slot.used_capacity).to.eq(0)
+     })
   })
 
 })
