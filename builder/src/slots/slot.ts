@@ -1,12 +1,13 @@
 import { Polarity } from '../polarities'
+import { Mod } from '../mods'
 
 interface SetPolarity {
   (polarity: Polarity): void
 }
 
 interface Slot {
-  polarity: Polarity
-  set_polarity: SetPolarity
+  _polarity: Polarity
+  _mod: Mod
 }
 
 export { Slot }
