@@ -40,6 +40,10 @@ class BaseSlot implements Slot {
   }
 
   get used_capacity() {
+    return -this.get_used_capacity()
+  }
+
+  get_used_capacity() {
     if (this._mod.polarity === this._polarity) {
       return this.matched_capacity
     } else {

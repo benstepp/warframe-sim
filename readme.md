@@ -26,3 +26,7 @@ a build mutates the mod set and plucks mods out when added
 
 react will use the build to control user interaction with the app
 react will use the mutated weapon to show stats
+
+Mods all have POSITIVE values
+Auras and stances have POSITIVE values
+Mod slots provide NEGATIVE values
