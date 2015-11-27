@@ -1,0 +1,5 @@
+interface ModType {
+
+}
+
+export { ModType }

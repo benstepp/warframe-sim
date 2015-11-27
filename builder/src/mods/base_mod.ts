@@ -1,15 +1,20 @@
+import { Rarity } from '../rarities'
 import { Polarity } from '../polarities'
-import { Mod } from './mod'
+import { Modifier } from './modifier'
+import { ModType } from '../mod_types'
 
 /**
  * The BaseMod controls behavior shared across all mods.
  * This includes changing the rank of the mod
  */
-class BaseMod implements Mod {
+class BaseMod {
   _cost: number
   _max_rank: number
   _rank: number
+  _modifiers: Map<string, Modifier>
   _polarity: Polarity
+  mod_type: ModType
+  rarity: Rarity
 
   /**
    * Increases the rank of the mod. Does not increase the
@@ -65,7 +70,7 @@ class BaseMod implements Mod {
    * is valid.
    */
   set cost(cost: number) {
-  if (cost >= 0) this._cost = cost
+    if (cost >= 0) this._cost = cost
   }
 
   /**
@@ -92,6 +97,19 @@ class BaseMod implements Mod {
   set polarity(polarity: Polarity) {
     this._polarity = polarity
   }
+
+  get_modifier(modifier: string) {
+    return this._modifiers.get(modifier).value(this.rank) || 0
+  }
+
+  set_modifier(modifier: string, value: Modifier) {
+    this._modifiers.set(modifier, value)
+  }
+
+  get strategies() {
+    return []
+  }
+
 }
 
 export { BaseMod }

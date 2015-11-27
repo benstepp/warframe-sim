@@ -1,1 +1,6 @@
+export * from './blunderbuss'
+export * from './pistol_gambit'
+export * from './point_strike'
+export * from './primed_pistol_gambit'
 export * from './serration'
+export * from './true_steel'
