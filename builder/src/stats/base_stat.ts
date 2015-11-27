@@ -4,7 +4,7 @@ const PRECISION_REGEX = /(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/
  * Many stats are modeled in the same way. This class
  * manages the similarity in them all to reduce duplication
  */
-class StatBase {
+class BaseStat {
   base: number
   _modifier: number
   _precision: number
@@ -86,4 +86,4 @@ class StatBase {
 
 }
 
-export { StatBase }
+export { BaseStat }

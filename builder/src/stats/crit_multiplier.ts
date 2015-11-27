@@ -1,6 +1,6 @@
-import { StatBase } from './stat_base'
+import { BaseStat } from './base_stat'
 
-class CritMultiplier extends StatBase {
+class CritMultiplier extends BaseStat {
 
 }
 

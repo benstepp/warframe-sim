@@ -1,9 +1,9 @@
-import { StatBase } from './stat_base'
+import { BaseStat } from './base_stat'
 
 /**
  * CritChance represents the crit chance of a weapon.
  */
-class CritChance extends StatBase {
+class CritChance extends BaseStat {
 
 }
 
