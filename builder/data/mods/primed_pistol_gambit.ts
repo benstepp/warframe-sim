@@ -10,7 +10,7 @@ class PrimedPistolGambit extends BaseMod implements Mod {
     this._max_rank = 10
     this._cost = 2
     this._polarity = new Madurai
-    this.rarity = new Legendary
+    this._rarity = new Legendary
     this._strategies = [ CriticalChanceStrategy ]
     this.set_modifier('CriticalChance', new Modifier(0.17))
   }

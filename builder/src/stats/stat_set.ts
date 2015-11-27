@@ -1,3 +1,4 @@
+import { ElementalDamage } from '../damage'
 import { Stat } from './stat'
 
 class StatSet {
@@ -9,12 +10,24 @@ class StatSet {
     })
   }
 
+  set(key: string, stat: Stat) {
+    this._set.set(key, stat)
+  }
+
   has(stat: string) {
     return this._set.has(stat)
   }
 
   get(stat: string) {
     return this._set.get(stat)
+  }
+
+  get elemental_damage() {
+    const elements = []
+    this._set.forEach((stat, key) => {
+      if (stat instanceof ElementalDamage) elements.push(stat)
+    })
+    return elements
   }
 
 }
