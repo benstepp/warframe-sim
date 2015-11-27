@@ -6,12 +6,11 @@ import { CriticalChanceStrategy } from '../../src/mod_strategies'
 class PistolGambit extends BaseMod implements Mod {
 
   constructor(rank?: number) {
-    super()
-    this._rank = rank || 0
+    super(rank)
     this._max_rank = 5
     this._cost = 4
     this._polarity = new Madurai
-    this.strategies = [ CriticalChanceStrategy ]
+    this._strategies = [ CriticalChanceStrategy ]
     this.set_modifier('CriticalChance', new Modifier(0.25))
   }
 

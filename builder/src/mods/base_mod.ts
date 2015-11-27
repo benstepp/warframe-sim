@@ -2,6 +2,7 @@ import { Rarity } from '../rarities'
 import { Polarity } from '../polarities'
 import { Modifier } from './modifier'
 import { ModType } from '../mod_types'
+import { ModStrategy } from '../mod_Strategies'
 
 /**
  * The BaseMod controls behavior shared across all mods.
@@ -13,8 +14,14 @@ class BaseMod {
   _rank: number
   _modifiers: Map<string, Modifier>
   _polarity: Polarity
-  mod_type: ModType
-  rarity: Rarity
+  _strategies: Array<any>
+  _mod_type: ModType
+  _rarity: Rarity
+
+  constructor(rank?: number) {
+    this._rank = rank || 0
+    this._strategies = []
+  }
 
   /**
    * Increases the rank of the mod. Does not increase the
@@ -107,7 +114,23 @@ class BaseMod {
   }
 
   get strategies() {
-    return []
+    return this._strategies
+  }
+
+  set rarity(rarity: Rarity) {
+    this._rarity = rarity
+  }
+
+  get rarity() {
+    return this._rarity
+  }
+
+  set mod_type(mod_type: ModType) {
+    this._mod_type = mod_type
+  }
+
+  get mod_type() {
+    return this._mod_type
   }
 
 }

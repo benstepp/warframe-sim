@@ -7,14 +7,13 @@ import { CriticalChanceStrategy } from '../../src/mod_strategies'
 class Blunderbuss extends BaseMod implements Mod {
 
   constructor(rank?: number) {
-    super()
-    this._rank = rank || 0
+    super(rank)
     this._max_rank = 5
     this._cost = 4
     this._polarity = new Madurai
     this.rarity = new Common
     this.mod_type = new Shotgun
-    this.strategies = [ CriticalChanceStrategy ]
+    this._strategies = [ CriticalChanceStrategy ]
     this.set_modifier('CriticalChance', new Modifier(0.15))
   }
 

@@ -4,8 +4,7 @@ import { Madurai } from '../../src/polarities'
 class Serration extends BaseMod implements WeaponMod {
 
   constructor(rank?: number) {
-    super()
-    this._rank = rank || 1
+    super(rank)
     this._max_rank = 10
     this._cost = 4
     this._polarity = new Madurai
